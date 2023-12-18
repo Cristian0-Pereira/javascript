@@ -5,13 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+    <style>
+        body{
+            font: normal 20px Arial;
+            padding: 40px;
+        }
+    </style>
 <body>
     
-
-
     <script>
-        var nome = window.prompt('Qual seu nome?')
-        document.white(`Seu nome tem ${nome.lenght} letras.`)
+        var nome = window.prompt('Digite seu nome')
+        document.write(`<strong>${nome}</strong> tem ${nome.length} letras.<br/>`)
+        document.write(`<strong>${nome}</strong> em maiúsculas -> ${nome.toUpperCase()}.<br/>`)
+        document.write(`<strong>${nome}</strong> em minúsculas -> ${nome.toLowerCase()}.`)        
+        // alert(`${nome} tem ${nome.length} letras.`) (mostrando na janela.)
     </script>
 </body>
 </html>
