@@ -24,3 +24,8 @@ footer{
     font-size: .8em;
     margin-top: 20px;
 }
+#imagem{
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+}
