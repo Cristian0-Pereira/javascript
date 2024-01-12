@@ -17,6 +17,10 @@ section{
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
+div{
+    text-align: center;
+}
+
 footer{
     color: white;
     text-align: center;
@@ -24,7 +28,11 @@ footer{
     font-size: .8em;
     margin-top: 20px;
 }
-#imagem{
+
+.mensagem{
+    margin-bottom: 10px;
+}
+.imagem{
     height: 250px;
     width: 250px;
     border-radius: 50%;
