@@ -22,9 +22,11 @@ footer{
 }
 header.txt, a.txt{
     color: black;
+    font-size: 1rem;
 }
-.txt{
+a.txt:hover{
     text-decoration: none;
+    font-weight: bold;
 }
 .mensagem{
     margin-bottom: 15px;

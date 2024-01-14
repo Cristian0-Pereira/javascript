@@ -1,10 +1,11 @@
+var nome = window.prompt('Nome:')
 function carregar() {
     var mensagem = document.querySelector(".mensagem")
     var imagem = document.querySelector(".imagem")
     let saudacao = document.querySelector('.saudacao')
 
     var data = new Date()
-    var hora = data.getHours()
+    var hora = 22//data.getHours()
     // Hora completa abaixo
     hora = hora<10?"0"+hora:hora
     var min = data.getMinutes()
@@ -17,18 +18,18 @@ function carregar() {
         //Bom dia
         imagem.src = "img/manha.jpg"
         document.body.style.background = "#84baf8"
-        saudacao.innerHTML = 'Bom dia!!!'
+        saudacao.innerHTML = `Bom dia ${nome}!!!`
     }else if (hora >= 12 && hora < 18) {
         //Boa tarde
         imagem.src = "img/tarde.jpg"
         document.body.style.background = "#f1b84e"
-        saudacao.innerHTML = 'Boa tarde!!!'
+        saudacao.innerHTML = `Bom tarde ${nome}!!!`
     }else {
         //Boa noite
         imagem.src = "img/noite.jpg"
         document.body.style.background = "#383737"
         document.querySelector('a').style.color = '#fff'
         document.querySelector('header').style.color = '#fff'
-        saudacao.innerHTML = 'Boa noite!!!'
+        saudacao.innerHTML = `Bom noite ${nome}!!!`
     }
 }
