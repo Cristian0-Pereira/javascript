@@ -1,10 +1,6 @@
 body{
     background: #70c2d3;
     font: normal 15pt Arial;
-}
-
-header{
-    color: white;
     text-align: center;
 }
 
@@ -17,16 +13,19 @@ section{
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
 }
 
-div{
-    text-align: center;
-}
-
 footer{
-    color: white;
-    text-align: center;
     font-style: italic;
     font-size: .8em;
     margin-top: 20px;
+}
+header.txt, a.txt{
+    color: black;
+}
+.txt{
+    text-decoration: none;
+}
+.noite{
+    color: white;
 }
 
 .mensagem{

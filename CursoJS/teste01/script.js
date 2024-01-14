@@ -3,7 +3,7 @@ function carregar() {
     var imagem = document.querySelector(".imagem")
 
     var data = new Date()
-    var hora = data.getHours()
+    var hora = 22//data.getHours()
     // Hora completa abaixo
     hora = hora<10?"0"+hora:hora
     var min = data.getMinutes()
@@ -12,7 +12,6 @@ function carregar() {
     seg = seg<10?"0" + seg:seg
     const intervalo = setInterval(carregar,1000)
     mensagem.innerHTML = `Agora são ${hora}:${min}:${seg}h`
-    
     if (hora >= 0 && hora < 12) {
         //Bom dia
         imagem.src = "img/manha.jpg"
@@ -25,5 +24,6 @@ function carregar() {
         //Boa noite
         imagem.src = "img/noite.jpg"
         document.body.style.background = "#383737"
+        let cor = querySelector()
     }
 }
