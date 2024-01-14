@@ -1,9 +1,10 @@
 function carregar() {
     var mensagem = document.querySelector(".mensagem")
     var imagem = document.querySelector(".imagem")
+    let saudacao = document.querySelector('.saudacao')
 
     var data = new Date()
-    var hora = 22//data.getHours()
+    var hora = data.getHours()
     // Hora completa abaixo
     hora = hora<10?"0"+hora:hora
     var min = data.getMinutes()
@@ -16,14 +17,18 @@ function carregar() {
         //Bom dia
         imagem.src = "img/manha.jpg"
         document.body.style.background = "#84baf8"
+        saudacao.innerHTML = 'Bom dia!!!'
     }else if (hora >= 12 && hora < 18) {
         //Boa tarde
         imagem.src = "img/tarde.jpg"
         document.body.style.background = "#f1b84e"
+        saudacao.innerHTML = 'Boa tarde!!!'
     }else {
         //Boa noite
         imagem.src = "img/noite.jpg"
         document.body.style.background = "#383737"
-        let cor = querySelector()
+        document.querySelector('a').style.color = '#fff'
+        document.querySelector('header').style.color = '#fff'
+        saudacao.innerHTML = 'Boa noite!!!'
     }
 }
