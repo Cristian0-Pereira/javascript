@@ -1,35 +1,34 @@
-var nome = window.prompt('Nome:')
-function carregar() {
-    var mensagem = document.querySelector(".mensagem")
-    var imagem = document.querySelector(".imagem")
-    let saudacao = document.querySelector('.saudacao')
+//var nome = window.prompt('Nome:')
+function contar() {
+    let ini = document.querySelector('#txti')
+    let fim = document.querySelector('#txtf')
+    let passo = document.querySelector('#txtp')
+    let res = document.querySelector('#res')
 
-    var data = new Date()
-    var hora = data.getHours()
-    // Hora completa abaixo
-    hora = hora<10?"0"+hora:hora
-    var min = data.getMinutes()
-    min = min<10?"0" + min:min
-    var seg = data.getSeconds()
-    seg = seg<10?"0" + seg:seg
-    const intervalo = setInterval(carregar,1000)
-    mensagem.innerHTML = `Agora são ${hora}:${min}:${seg}h`
-    if (hora >= 0 && hora < 12) {
-        //Bom dia
-        imagem.src = "img/manha.jpg"
-        document.body.style.background = "#84baf8"
-        saudacao.innerHTML = `Bom dia <strong>${nome}</strong>!!!`
-    }else if (hora >= 12 && hora < 18) {
-        //Boa tarde
-        imagem.src = "img/tarde.jpg"
-        document.body.style.background = "#f1b84e"
-        saudacao.innerHTML = `Boa tarde <strong>${nome}</strong>!!!`
-    }else {
-        //Boa noite
-        imagem.src = "img/noite.jpg"
-        document.body.style.background = "#383737"
-        document.querySelector('a').style.color = '#fff'
-        document.querySelector('header').style.color = '#fff'
-        saudacao.innerHTML = `Boa noite <strong>${nome}</strong>!!!`
+    if (ini.value.length == 0 || fim.value.length == 0 || passo.value.length == 0) {
+        res.innerHTML = 'Impossível contar'
+        //window.alert('[ERRO] Faltam dados!')
+    }else{
+        res.innerHTML = 'Contando: <br>'
+        let i = Number(ini.value)
+        let f = Number(fim.value)
+        let p = Number(passo.value)
+
+        if (p <= 0) {
+            window.alert('Passo inválido! Considere PASSO 1')
+            p = 1
+        }
+        if (i < f) {
+            // Contagem crescente
+            for(let c = i; c <= f; c += p){
+                res.innerHTML += `${c} \u{1f449} `
+            }
+        }else{
+            // Contagem regressiva
+            for(let c = i; c >= f; c -= p) {
+                res.innerHTML += ` ${c} \u{1f449}`
+            }
+        }
+        res.innerHTML += `\u{1f3c1}`
     }
 }

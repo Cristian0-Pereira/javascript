@@ -3,29 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hora do Dia</title>
+    <title>Super Contador</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body onload="carregar()">
-    <header class="txt">
-        <h1>Hora do dia</h1>
+<body>
+    <header>
+        <h1>Vamos contar</h1>
     </header>
-
     <section>
-        <div class="mensagem">
-            Hora do dia...
+        <div id="dados">
+            <p>Início:
+                <input type="number" name="ini" id="txti">
+            </p>
+            <p>Fim:
+                <input type="number" name="fim" id="txtf">
+            </p>
+            <p>Passo:
+                <input type="number" name="passo" id="txtp">
+            </p>
+            <p class="botao">
+                <input class="btn" type="button" value="Contar" onclick="contar()">
+            </p>
         </div>
-
-        <div>
-            <img class="imagem" src="img/manha.jpg" alt="Foto da manhã">
-        </div>
-        <div class="saudacao">
-            Bom dia
+        <div id="res">
+            <h4>Preparando a contagem...</h4>
         </div>
     </section>
-
     <footer>
-        <a class="txt" href="https://www.cursoemvideo.com" target="_blank">&copy; Curso em Video</a>
+        <p>&copy;Curso em Vídeo</p>
     </footer>
     <script src="script.js"></script>
 </body>

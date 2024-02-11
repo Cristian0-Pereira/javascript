@@ -2,6 +2,7 @@ body{
     background: #70c2d3;
     font: normal 15pt Arial;
     text-align: center;
+    display: block;
 }
 section{
     background: white;
@@ -9,30 +10,23 @@ section{
     padding: 15px;
     width: 500px;
     margin: auto;
+    text-align: left;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
-}
-.saudacao{
-    font-style: italic;
-    padding: 10px;
 }
 footer{
     font-style: italic;
     font-size: .8em;
     margin-top: 20px;
 }
-header.txt, a.txt{
-    color: black;
-    font-size: 1rem;
+.btn{
+    padding: 3px 10px;
+    font-size: .8em;
+    border-radius: 8px;
 }
-a.txt:hover{
-    text-decoration: none;
-    font-weight: bold;
+.botao{
+    padding-left: 100px;
 }
-.mensagem{
-    margin-bottom: 15px;
-}
-.imagem{
-    height: 250px;
-    width: 250px;
-    border-radius: 50%;
+#res{
+    font-size: 14px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
