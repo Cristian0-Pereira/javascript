@@ -3,8 +3,8 @@ function verificar() {
     let ano = data.getFullYear()
     let fano = document.querySelector('#txtAno')
     let res = document.querySelector('#res')
-    if (fano.value.length == 0 || Number(fano.value) > ano){
-        window.alert('Erro, tente novamente!') //Tratando erro do usuário
+    if (document.querySelector('.ini') < 0) {
+        window.alert('Insira um número') //Tratando erro do usuário
     }else{
         let fsex = document.getElementsByName('radsex')
         let idade = ano - Number(fano.value)
