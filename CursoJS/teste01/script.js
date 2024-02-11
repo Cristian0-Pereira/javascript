@@ -23,13 +23,13 @@ function carregar() {
         //Boa tarde
         imagem.src = "img/tarde.jpg"
         document.body.style.background = "#f1b84e"
-        saudacao.innerHTML = `Bom tarde <strong>${nome}</strong>!!!`
+        saudacao.innerHTML = `Boa tarde <strong>${nome}</strong>!!!`
     }else {
         //Boa noite
         imagem.src = "img/noite.jpg"
         document.body.style.background = "#383737"
         document.querySelector('a').style.color = '#fff'
         document.querySelector('header').style.color = '#fff'
-        saudacao.innerHTML = `Bom noite <strong>${nome}</strong>!!!`
+        saudacao.innerHTML = `Boa noite <strong>${nome}</strong>!!!`
     }
 }
